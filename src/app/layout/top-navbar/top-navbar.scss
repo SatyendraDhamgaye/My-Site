@@ -1,0 +1,14 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 160px;   // same as sidebar width
+  right: 0;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+
+  background: transparent;
+  z-index: 1000;
+}
