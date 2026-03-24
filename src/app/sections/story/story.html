@@ -1,0 +1,29 @@
+<section class="story" #storySection>
+
+  <div class="story-content">
+    <h1 class="story-title">My Story</h1>
+
+    <p #gdayRef>G’day! 👋</p>
+    <p>I’m Satyendra — a passionate software developer 🤖 from India, proudly contributing my skills at TCS. 🌸</p>
+    <p>In my role, I thrive on crafting innovative solutions and meticulously hunting down bugs to ensure software perfection. 😊</p>
+    <p>In my spare time, you’ll often find me gaming 🎮, singing 🎤, or exploring new horizons 🧗.</p>
+    <p>I believe in the power of diverse experiences and I’m always excited to build meaningful connections and embark on fresh adventures. ✊</p>
+    <p class="ending">Let’s connect 🌏 and create something exceptional together.</p>
+  </div>
+
+@if (activeWordIndex !== -1) {
+  <div class="floating-word">
+    <div class="floating-stack">
+      <span class="small-text">
+        {{ floatingWords[activeWordIndex]?.small }}
+        {{ floatingWords[activeWordIndex]?.emoji }}
+      </span>
+
+      <span class="big-text">
+        {{ floatingWords[activeWordIndex]?.big }}
+      </span>
+    </div>
+  </div>
+}
+
+</section>

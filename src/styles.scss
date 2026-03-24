@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+/* Prevent horizontal scroll globally */
+html, body {
+  overflow-x: clip; /* modern and safer than hidden */
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -12,4 +17,12 @@ a {
 body {
   font-family: 'Mooli', sans-serif;
   background: white;
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+/* GLOBAL DARK MODE */
+
+body.dark-mode {
+  background-color: #000000;
+  color: white;
 }

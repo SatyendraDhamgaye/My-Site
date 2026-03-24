@@ -12,3 +12,8 @@
   background: transparent;
   z-index: 1000;
 }
+
+:host-context(body.dark-mode) {
+  background: #111;
+  color: white;
+}

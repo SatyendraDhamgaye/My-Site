@@ -1,0 +1,75 @@
+.story {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 100%;
+  max-width: 100%;
+}
+
+/* LEFT SIDE — TEXT */
+.story-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+
+.story-title {
+  font-size: clamp(6rem, 8vw, 9rem);
+  font-weight: 900;
+  margin-bottom: 5vh;
+}
+
+.story-content p {
+  font-size: clamp(3rem, 4vw, 4rem);
+  line-height: 1.7;
+  font-weight: 1000;
+}
+
+.floating-word {
+  flex: 0 0 50%;
+
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
+
+:host-context(body.dark-mode) {
+  background: black;
+  color: white;
+  transition: background 0.6s ease, color 0.6s ease;
+}
+
+/* Small neon style */
+.small-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-style: italic;
+    color: white;
+ 
+}
+
+/* Big dramatic brush text */
+.big-text {
+  font-size: clamp(3rem, 5vw, 6rem);
+  font-weight: 900;
+  color: white;
+  letter-spacing: 2px;
+
+  font-family: 'Permanent Marker', cursive;
+
+  margin-top: 0.4rem;
+
+}

@@ -6,28 +6,37 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: 'Mooli', sans-serif;
+  transition: background 0.6s ease, color 0.6s ease;
 }
 
-.app-container {
-  display: flex;
-}
+/* =========================
+   LAYOUT
+========================= */
 
-.main-content {
-  margin-left: 160px;
-  width: 100%;
-}
 .app-layout {
   display: block;
 }
 
 .content {
-  margin-left: 160px; // same as sidebar width
-  width: 100%;
+  margin-left: 160px;
+  width: calc(100% - 160px);
 }
+
+@media (max-width: 1024px) {
+  .content {
+    margin-left: 0;
+    margin-top: 70px;
+    width: 100%;
+  }
+}
+
+/* =========================
+   MARQUEE SECTION
+========================= */
 
 .marquee-section {
   position: relative;
-  width: 100vw;     // viewport width
+  width: 100%;
   height: 50vh;
   overflow: hidden;
   z-index: 1000;
@@ -36,18 +45,17 @@ body {
 .marquee-band {
   position: absolute;
   top: 50%;
-  left: -60vw;      // overshoot left
+  left: 50%;
 
-  width: 220vw;     // overshoot both sides
-  height: 25vh;
+  width: 200vw;
+  height: 15vh;
 
   background: black;
 
   display: flex;
   align-items: center;
 
-  transform: rotate(-6deg) translateY(-50%);
-  z-index: 1;
+  transform: translate(-50%, -50%) rotate(-6deg);
 }
 
 .marquee-track {
@@ -72,23 +80,21 @@ body {
   }
 }
 
+/* =========================
+   DARK SECTION (Below 2nd Marquee Only)
+========================= */
 
 
+/* Activated from TS */
+.after-marquee.dark {
+  background: black;
+  color: white;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 1024px) {
-  .content {
-    margin-left: 0;
-    margin-top: 70px;
-  }
+/* Optional: ensure nested sections inherit properly */
+.after-marquee.dark .story,
+.after-marquee.dark .experience,
+.after-marquee.dark .projects {
+  background: black;
+  color: white;
 }
