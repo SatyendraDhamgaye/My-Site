@@ -1,0 +1,79 @@
+.contact-section {
+  min-height: 100vh;
+  background: black;
+  color: #00ff9c;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 120px 80px;
+}
+
+.content {
+  max-width: 900px;
+}
+
+.emoji {
+  font-size: 28px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.title {
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 60px;
+}
+
+/* CTA BUTTON */
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 26px;
+  font-weight: 500;
+
+  padding: 22px 36px;
+
+  color: #eaeaea;
+  text-decoration: none;
+
+  border: 1.5px solid #2a2a2a;
+  background: transparent;
+
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+/* 👇 soft hover */
+.cta-btn:hover {
+  border-color: #00ff9c;
+  color: #00ff9c;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+/* SOCIALS */
+.socials {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.socials a {
+  font-size: 14px;
+  color: white;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  opacity: 1;
+}
+
+

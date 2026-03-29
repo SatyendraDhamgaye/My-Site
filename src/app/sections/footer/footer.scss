@@ -1,0 +1,138 @@
+.fun-footer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: flex-start;
+  padding-left: 18vw;
+
+  position: relative; // ✅ IMPORTANT
+  overflow: hidden;
+}
+
+/* initial hidden state */
+.content {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* reveal */
+.fun-footer.show .content {
+  text-align: center;
+  animation: fadeUp 0.7s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* text styles */
+.tag {
+  color: #08f484;
+  font-style: italic;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.title {
+  font-size: clamp(6rem, 9vw, 8rem);
+  letter-spacing: 2px;
+  
+}
+
+.subtitle {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+/* ========================= */
+/* 💥 EMOJI SYSTEM */
+/* ========================= */
+
+.emoji-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.emoji {
+  position: absolute;
+  font-size: 2.2rem;
+
+  animation: popFloat 6s ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes popFloat {
+  0% {
+    transform: scale(0.2) translateY(20px);
+    opacity: 0;
+  }
+
+  15% {
+    transform: scale(1.2) translateY(0px);
+    opacity: 1;
+  }
+
+  25% {
+    transform: scale(1) translateY(0px);
+  }
+
+  50% {
+    transform: scale(1) translateY(-12px);
+  }
+
+  75% {
+    transform: scale(1) translateY(0px);
+  }
+
+  100% {
+    transform: scale(1) translateY(0px);
+  }
+}
+
+/* 🎯 EXACT POSITIONS (like your reference) */
+
+.e1 { top: 8%; left: 5%; }
+.e2 { top: 20%; left: 40%; }
+.e3 { top: 35%; right: 20%; }
+.e4 { top: 70%; left: 25%; }
+.e5 { top: 60%; right: 35%; }
+.e6 { bottom: 25%; right: 15%; }
+.e7 { bottom: 15%; right: 5%; }
+.e8 { bottom: 5%; left: 10%; }
+.e9 { top: 40%; left: 15%; }
+.e10 { bottom: 20%; left: 45%; }
+.e11 { top: 65%; left: 5%; }
+
+
+
+.title-link {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+
+  transition: color 0.2s ease, text-shadow 0.3s ease;
+}
+
+/* hover */
+.title-link:hover {
+  color: transparent;
+  -webkit-text-stroke: 0.01px white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* 👇 KEY FIX */
+.title-link:not(:hover) {
+  -webkit-text-stroke: 1.5px white;   // keep stroke always applied
+}
+

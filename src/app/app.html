@@ -10,21 +10,21 @@
 <!-- FULL PAGE STRIP -->
 <section class="marquee-section">
   <div class="marquee-band">
-<div class="marquee-track">
-  <div class="marquee-group">
-    <span>Check some of my stuff! &nbsp;</span>
-    <span>Check some of my stuff! &nbsp;</span>
-    <span>Check some of my stuff! &nbsp;</span>
-    <span>Check some of my stuff! &nbsp;</span>
-  </div>
+    <div class="marquee-track">
+      <div class="marquee-group">
+        <span>Check some of my stuff! &nbsp;</span>
+        <span>Check some of my stuff! &nbsp;</span>
+        <span>Check some of my stuff! &nbsp;</span>
+        <span>Check some of my stuff! &nbsp;</span>
+      </div>
 
-  <div class="marquee-group">
-    <span>Check some of my stuff! &nbsp;</span>
-    <span>Check some of my stuff! &nbsp;</span>
-    <span>Check some of my stuff! &nbsp;</span>
-    <span>Check some of my stuff! &nbsp;</span>
-  </div>
-</div>
+      <div class="marquee-group">
+        <span>Check some of my stuff! &nbsp;</span>
+        <span>Check some of my stuff! &nbsp;</span>
+        <span>Check some of my stuff! &nbsp;</span>
+        <span>Check some of my stuff! &nbsp;</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -64,4 +64,47 @@
   <div class="content">
     <app-experience></app-experience>
   </div>
+
+  <div class="content">
+    <app-footer></app-footer>
+  </div>
+
+  <section class="contact-marquee" #contactSection>
+
+  <div class="strip left s1">HAVE ENOUGH?</div>
+  <div class="strip left s2">BUT YOU CAN CONTACT ME</div>
+
+  <div class="strip right s3">I CAN'T SAY MORE 'BOUT ME</div>
+  <div class="strip left s4">AS YOU WISH!</div>
+
+  <div class="strip right s5">I WILL BE HAPPY TO CHITCHAT A BIT!</div>
+
+</section>
+
+
+  <div class="content">
+    <app-end></app-end>
+  </div>
+  
+
+
+<footer class="footer">
+  <div class="logo">S</div>
+
+  <p>Homemade with 💖 in 2023</p>
+  <p class="end">You have reached the end</p>
+</footer>
+
+
+
+
 </div>
+
+
+<button
+  class="scroll-top"
+  [class.visible]="showScrollTop"
+  (click)="scrollToTop()"
+>
+  ↑
+</button>
