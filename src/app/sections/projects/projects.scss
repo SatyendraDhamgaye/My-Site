@@ -39,11 +39,16 @@
 
 /* IMAGE FRAME */
 .project-image {
-  width: 85%;          /* relative to left column */
+  width: 85%;
   aspect-ratio: 10 / 6;
 
   overflow: hidden;
   border-radius: 18px;
+
+  border: 2px solid black;
+  box-shadow: 
+    0 0 0 1px rgba(0,255,174,0.2),
+    0 8px 30px rgba(0,255,174,0.25);
 }
 
 /* IMAGE */
